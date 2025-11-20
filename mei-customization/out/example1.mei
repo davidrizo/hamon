@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="hamon.rng"
+            type="application/relax-ng+xml"?>
+<?xml-model href="hamon.sch"
+            type="application/schematron+xml"?>
+
+<mei xmlns="http://www.music-encoding.org/ns/mei"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Minimal MEI test for custom &lt;harm&gt;</title>
+            </titleStmt>
+            <pubStmt>
+                <availability>
+                    <p>For local testing only.</p>
+                </availability>
+            </pubStmt>
+        </fileDesc>
+    </meiHead>
+    
+    <music>
+        <body>
+            <mdiv>
+                <score>
+                    <scoreDef>
+                        <!-- super-minimal scoreDef -->
+                        <staffGrp>
+                            <staffDef n="1" lines="5" clef.shape="G" clef.line="2"/>
+                        </staffGrp>
+                    </scoreDef>
+                    
+                    <section>
+                        <measure n="1">
+                            <staff n="1">
+                                <layer n="1">
+                                    <!-- Just a single quarter-note C4 -->
+                                    <note xml:id="n1" pname="c" oct="4" dur="4"/>
+                                    
+                                    <!-- Your customized <harm> with MusicXML-like attributes -->
+                                    <harm xml:id="h1"
+                                        root.pname="c"
+                                        root.accid="s"
+                                        bass.pname="g"
+                                        chord.kind="major-seventh">
+                                        C♯maj7/G
+                                    </harm>
+                                    
+                                </layer>
+                            </staff>
+                        </measure>
+                    </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>
