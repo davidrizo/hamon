@@ -11,7 +11,7 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/
   
 --><!---->
    <start>
-      <choice/>
+
    </start>
    <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
            xmlns:rng="http://relaxng.org/ns/structure/1.0"

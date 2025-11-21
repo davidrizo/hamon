@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="hamon.rng"
-            type="application/relax-ng+xml"?>
-<?xml-model href="hamon.sch"
-            type="application/schematron+xml"?>
+            type="application/xml"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--<?xml-model href="hamon.sch"
+            type="application/xml"
+            schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
 
 <mei xmlns="http://www.music-encoding.org/ns/mei"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -37,6 +39,7 @@
                                 <layer n="1">
                                     <!-- Just a single quarter-note C4 -->
                                     <note xml:id="n1" pname="c" oct="4" dur="4"/>
+                                    
                                     
                                     <!-- Your customized <harm> with MusicXML-like attributes -->
                                     <harm xml:id="h1"

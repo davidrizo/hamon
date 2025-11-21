@@ -1,0 +1,8 @@
+<!-- Using BNF & EBNF Highlighting in VS Code-->
+
+start::= (chord_sequence alternative_sequence*)+;
+chord_sequence::= chord ("," chord)*;
+alternative_sequence::= "|" chord_sequence ;
+chord ::=  NOTE+ ;
+NOTE ::=  "A" | "B" | "C" | "D" | "E" | "F" | "G" ;
+**TODO**
